@@ -1,0 +1,21 @@
+@import "./mixins";
+
+// breakpoints
+$tablet: 768px;
+$desk: 1440px;
+
+a {
+  text-decoration: none !important;
+  color: #323232;
+}
+
+/*
+    BASE
+  */
+html,
+body {
+  margin: 0;
+  font-family: $font-main; // sets default text font for entire project
+  color: 333230; // sets default text color for entire project
+  word-break: break-word;
+}
