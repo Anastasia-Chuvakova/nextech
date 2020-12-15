@@ -1,0 +1,12 @@
+//products
+.product {
+  a.d-block {
+    overflow: hidden;
+    .img-fluid {
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}

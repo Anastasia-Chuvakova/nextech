@@ -1,0 +1,14 @@
+.product a.d-block {
+  overflow: hidden;
+}
+
+.product a.d-block .img-fluid {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.product a.d-block .img-fluid:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+/*# sourceMappingURL=main.css.map */

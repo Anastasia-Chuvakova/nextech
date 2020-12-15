@@ -1,0 +1,186 @@
+[
+     
+        {
+        
+            "id":"1num",
+            "category": "Page Layout",
+            "image": "/assets/page-layout/agenda.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"2num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/attendees.png",
+            "description": "",
+            "price": "2",
+            "addLanguage": "1.250",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"3num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/breakoutrooms-networking1.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"4num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/breakoutrooms-networking2.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"5num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/expo-booth1.png",
+            "description": "",
+            "price": "8",
+            "addLanguage": "",
+            "perDay": "",
+            "addPerHour": ""
+            
+        },
+        {
+            "id":"6num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/expo-booth2.png",
+            "description": "",
+           "price": "12",
+           "addLanguage": "",
+           "perDay": "",
+            "addPerHour": ""
+            
+        },
+        {
+            "id":"7num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/expo-booth3.png",
+            "description": "",
+            "price": "16.50",
+            "addLanguage": "",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"8num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/page-type1.png",
+            "description": "",
+             "price": "12",
+             "addLanguage": "",
+             "perDay": "",
+            "addPerHour": ""
+            
+        },
+        {
+            "id":"9num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/page-type2.png",
+            "description": "",
+           "price": "12",
+           "addLanguage": "",
+           "perDay": "",
+            "addPerHour": ""
+        },  
+        {
+            "id":"10num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/page-type3.png",
+            "description": "",
+           "price": "12",
+           "addLanguage": "",
+           "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"11num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/program.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"12num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/registration.png",
+            "description": "",
+            "price": "20",
+            "addLanguage": "10",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"13num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/speakers.png",
+            "description": "",
+            "price": "21",
+            "addLanguage": "10",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"14num",
+            "category": "Page Layout",
+            "image": "assets/page-layout/expo-layout.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+        },
+        {
+            "id":"15num",
+            "category": "interaction",
+            "image": "assets/interaction/interaction.png",
+            "description": "",
+            "price": "",
+            "addLanguage": "",
+            "perDay": "",
+            "addPerHour": ""
+           
+        },
+        {
+            "id":"16num",
+            "category": "interaction",
+            "image": "assets/interaction/quizz.png",
+            "description": "",
+            "price": "18",
+            "addLanguage": "9",
+            "perDay": "",
+            "addPerHour": ""
+          
+        },
+        {
+            "id":"17num",
+            "category": "broadcoast",
+            "image": "assets/broadcast/webcast-services.png",
+            "description": "",
+            "price": "",
+            "addLanguage": "",
+               "perDay": "195",
+            "addPerHour": "20"
+        }
+    
+
+   
+   
+
+]
+
+    
