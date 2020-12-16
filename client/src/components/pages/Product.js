@@ -1,19 +1,37 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import collapse from "bootstrap";
+import Modal from "../Modal";
+import Currency from "../Currency";
 
 class Product extends Component {
-  state = {
-    productData: [],
-    baseCurrency: "USD",
-    cpnvertToCurrency: "CAD",
-    baseAmout: "",
-    currencies: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      productData: [],
+      baseCurrency: "USD",
+      cpnvertToCurrency: "CAD",
+      baseAmout: "",
+      currencies: [],
+      showHide: false,
+      modalID: "",
+      modalData: [{}],
+      addToCartItem: {},
+      addToCartAmount: "",
+      cartItems: [
+        {
+          item: {},
+          amount: "",
+        },
+      ],
+    };
+  }
+
+  //const API_URL = 'https://api.exchangeratesapi.io/latest';
 
   componentDidMount() {
     axios
       .get("/product")
+
       // .then((repsonse) => repsonse.json())
       .then((response) => {
         const productData = response.data;
@@ -21,6 +39,46 @@ class Product extends Component {
         console.log("Product response:", response);
       });
     // console.log("info:", this);
+  }
+
+  //  const {modalData} = this.state;
+  //  const  newModalData = response.d
+  // addToCart = (productObj, quantity) => {
+  //   //   setState((modalData)=>({
+  //   //     productObj: modalData.productObj.push([{}])
+  //   //  }),
+  //   //this.setState({ modalData: [{ productObj: productObj.category }] });
+
+  //   // this.setState((prevState) => ({
+  //   //   modalData: [...prevState.ModalData, "new value"],
+  //   // }));
+  //   // this.setState((prevState) => ({
+  //   //   modalData: ["new value", ...prevState.modalData],
+  //   // }));
+  //   // this.setState((prevState) => ({
+  //   //   modalData: [...prevState.modalData, { name: "object" }],
+  //   // }));
+  //   // this.setState((prevState) => ({
+  //   //   modalData: [{ name: "object" }, ...prevState.modalData],
+  //   // }));
+  //   // this.setState({ addToCartItem: productObj });
+  //   // this.setState({ addToCartAmount: amount });
+  //   // console.log("product Obj", this.state.addToCartItem);
+  //   // console.log("product amount", this.state.addToCartAmount);
+  //   let newCartItem = {
+  //     item: productObj,
+  //     amount: quantity,
+  //   };
+  //   let newCartItems = this.state.cartItems.concat(newCartItem);
+  //   this.setState({ cartItems: newCartItems });
+  //   console.log("newcartitem,", newCartItem);
+  //   console.log("newcartitems,", newCartItems);
+  //   console.log("cart state,", this.state.cartItems);
+  // };
+
+  setModalInfo(productIndex, productObj) {
+    this.setState({ modalID: productIndex });
+    this.setState({ modalData: productObj });
   }
 
   render() {
@@ -37,6 +95,7 @@ class Product extends Component {
         <div className="row">
           {item.map((item, index) => (
             //Product
+
             <div className="py-2 col-xl-3 col-lg-4 col-sm-6 col-xs-12">
               <div className="card">
                 <div className="product text-center">
@@ -54,20 +113,16 @@ class Product extends Component {
                         <li key={index}>
                           <p>Category: {item.category}</p>
                         </li>
+                        <li>Product ID: {item.id}</li>
                       </ul>
                     </div>
                   </div>
-                  <h6>
-                    <a className="reset-anchor" href="#">
-                      Name of the item
-                    </a>
-                  </h6>
-                  <button className="btn btn-primary">Show Description</button>
 
-                  <div>
-                    <p className="small text-muted">
-                      description:{item.description}
-                    </p>
+                  <div onClick={() => this.setModalInfo(index, item)}>
+                    <Modal
+                      productID={this.state.modalID}
+                      productData={this.state.modalData}
+                    />
                   </div>
 
                   {item.price.length > 0 && (
@@ -92,6 +147,7 @@ class Product extends Component {
             </div>
           ))}
         </div>
+        {/* <Cart cartItems={this.state.cartItems} /> */}
       </div>
     );
   }

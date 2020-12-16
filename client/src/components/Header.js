@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-
+import cart from "../assets/images/cart.png";
 import { Button } from "bootstrap";
 
 class Header extends Component {
@@ -40,6 +40,15 @@ class Header extends Component {
                 <li className="nav-item">
                   <NavLink className="nav-link text-dark" to="/product">
                     Product
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link w-25 p-3" to="/cart">
+                    <img
+                      src={cart}
+                      alt="cart"
+                      className="fas fa-dolly-flatbed mr-1 text-gray"
+                    />
                   </NavLink>
                 </li>
               </ul>
