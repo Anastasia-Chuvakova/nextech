@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/pages/Home";
 import Product from "./components/pages/Product";
 import Cart from "./components/pages/Cart";
-import About from "./components/pages/About";
+
 //import "bootstrap/dist/css/bootstrap.css";
 //import "bootstrap/dist/css/bootstrap-theme.css";
 
@@ -14,11 +14,10 @@ class App extends Component {
       <HashRouter>
         <div>
           <Header />
-          <h1>Simple SPA</h1>
 
           <div className="content"></div>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+
           <Route path="/product" component={Product} />
           <Route path="/cart" component={Cart} />
         </div>

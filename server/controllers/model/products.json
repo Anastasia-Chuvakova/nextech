@@ -5,21 +5,27 @@
             "id":"1num",
             "category": "Page Layout",
             "image": "/assets/page-layout/agenda.png",
-            "description": "",
+            "description":"Available Now: Displays attendees bookmarked events, Can directly link from events to agenda Available in December: ICS 'add to calendar' functionality",
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"2num",
             "category": "Page Layout",
             "image": "assets/page-layout/attendees.png",
-            "description": "",
+            "description":"Avaliable Now: Dynamically generated from the actual users attending the event. Users can enter the following info into their profile (viewable by other attendees)Profile image, Short Biography,Company, Title, Email (can be different from account email),Telephone, Meeting Link (for user supplied Zoom, Calendly, etc.), Social Media Profile Link: Facebook, Youtube, LinkedIn, Twitter, Instagram, Privacy Opt Out - hides their profile from other attendees. Note: If user does not fill in their profile they do not appear.",
             "price": "2",
-            "addLanguage": "1.250",
+            "addLanguage": "1.25",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"3num",
@@ -29,7 +35,10 @@
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"4num",
@@ -39,7 +48,10 @@
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"5num",
@@ -49,7 +61,10 @@
             "price": "8",
             "addLanguage": "",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
             
         },
         {
@@ -60,7 +75,10 @@
            "price": "12",
            "addLanguage": "",
            "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
             
         },
         {
@@ -71,7 +89,10 @@
             "price": "16.50",
             "addLanguage": "",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"8num",
@@ -81,7 +102,10 @@
              "price": "12",
              "addLanguage": "",
              "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
             
         },
         {
@@ -92,7 +116,10 @@
            "price": "12",
            "addLanguage": "",
            "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },  
         {
             "id":"10num",
@@ -102,7 +129,10 @@
            "price": "12",
            "addLanguage": "",
            "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"11num",
@@ -112,7 +142,10 @@
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"12num",
@@ -122,7 +155,10 @@
             "price": "20",
             "addLanguage": "10",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"13num",
@@ -132,7 +168,10 @@
             "price": "21",
             "addLanguage": "10",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
         {
             "id":"14num",
@@ -142,39 +181,51 @@
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
         },
+        
         {
             "id":"15num",
-            "category": "interaction",
-            "image": "assets/interaction/interaction.png",
-            "description": "",
-            "price": "",
-            "addLanguage": "",
-            "perDay": "",
-            "addPerHour": ""
-           
-        },
-        {
-            "id":"16num",
             "category": "interaction",
             "image": "assets/interaction/quizz.png",
             "description": "",
             "price": "18",
             "addLanguage": "9",
             "perDay": "",
-            "addPerHour": ""
+            "addPerHour": "",
+            "add100":"",
+            "add200":"",
+            "add300":""
           
         },
         {
-            "id":"17num",
+            "id":"16num",
             "category": "broadcoast",
             "image": "assets/broadcast/webcast-services.png",
             "description": "",
             "price": "",
             "addLanguage": "",
                "perDay": "195",
-            "addPerHour": "20"
+            "addPerHour": "20",
+            "add100":"",
+            "add200":"",
+            "add300":""
+        },
+        {
+            "id":"17num",
+            "category": "User Plan",
+            "image": "assets/users.png",
+            "description": "",
+            "price": "",
+            "addLanguage": "",
+               "perDay": "",
+            "addPerHour": "",
+            "add100":"199",
+            "add200":"299",
+            "add300":"349"
         }
     
 

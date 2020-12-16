@@ -5,8 +5,7 @@
             "id":"1num",
             "category": "Page Layout",
             "image": "/assets/page-layout/agenda.png",
-            "description":"Available Now:
-            Displays attendees bookmarked events, 
+            "description":"Available Now : Displays attendees bookmarked events, 
             Can directly link from events to agenda
             
             Available in December: 
@@ -21,21 +20,7 @@
             "id":"2num",
             "category": "Page Layout",
             "image": "assets/page-layout/attendees.png",
-            "description":"Avaliable Now: 
-            Dynamically generated from the actual users attending the event. Users can enter the following info into their profile (viewable by other attendees)
-            Profile image,
-            Short Biography,
-            Company,
-            Title,
-            Email (can be different from account email),
-            Telephone,
-            Meeting Link (for user supplied Zoom, Calendly, etc.),
-            Social Media Profile Link: Facebook, Youtube, LinkedIn, Twitter, Instagram, 
-            Privacy Opt Out - hides their profile from other attendees.
-
-            Note: If user does not fill in their profile they do not appear. 
-
-            ",
+            "description":"Avaliable Now: Dynamically generated from the actual users attending the event. Users can enter the following info into their profile (viewable by other attendees)Profile image, Short Biography,Company, Title, Email (can be different from account email),Telephone, Meeting Link (for user supplied Zoom, Calendly, etc.), Social Media Profile Link: Facebook, Youtube, LinkedIn, Twitter, Instagram, Privacy Opt Out - hides their profile from other attendees. Note: If user does not fill in their profile they do not appear.",
             "price": "2",
             "addLanguage": "1.250""Mainstage",
             "dayRate": "",

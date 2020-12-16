@@ -7,10 +7,10 @@ import { Button } from "bootstrap";
 class Header extends Component {
   render() {
     return (
-      <div className="containter-fluid  ">
+      <div className="containter-fluid bg-light ">
         <div className="d-flex justify-content-between header-container">
           <NavLink className="navbar-logo w-25 p-3" to="/">
-            <img src={logo} alt="logo" />
+            <img className="img rounded" src={logo} alt="logo" />
           </NavLink>
 
           <nav className="navbar navbar-expand-lg navbar-light">
@@ -32,23 +32,15 @@ class Header extends Component {
                     Home<span className="sr-only">(current)</span>
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link text-dark" to="/about">
-                    About us
-                  </NavLink>
-                </li>
+
                 <li className="nav-item">
                   <NavLink className="nav-link text-dark" to="/product">
                     Product
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link w-25 p-3" to="/cart">
-                    <img
-                      src={cart}
-                      alt="cart"
-                      className="fas fa-dolly-flatbed mr-1 text-gray"
-                    />
+                  <NavLink className="nav-link text-dark" to="/cart">
+                    Cart
                   </NavLink>
                 </li>
               </ul>

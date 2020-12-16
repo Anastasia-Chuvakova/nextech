@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Modal from "../Modal";
-import Currency from "../Currency";
 
 class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
       productData: [],
-      baseCurrency: "USD",
-      cpnvertToCurrency: "CAD",
-      baseAmout: "",
-      currencies: [],
+
       showHide: false,
       modalID: "",
       modalData: [{}],
@@ -41,41 +37,6 @@ class Product extends Component {
     // console.log("info:", this);
   }
 
-  //  const {modalData} = this.state;
-  //  const  newModalData = response.d
-  // addToCart = (productObj, quantity) => {
-  //   //   setState((modalData)=>({
-  //   //     productObj: modalData.productObj.push([{}])
-  //   //  }),
-  //   //this.setState({ modalData: [{ productObj: productObj.category }] });
-
-  //   // this.setState((prevState) => ({
-  //   //   modalData: [...prevState.ModalData, "new value"],
-  //   // }));
-  //   // this.setState((prevState) => ({
-  //   //   modalData: ["new value", ...prevState.modalData],
-  //   // }));
-  //   // this.setState((prevState) => ({
-  //   //   modalData: [...prevState.modalData, { name: "object" }],
-  //   // }));
-  //   // this.setState((prevState) => ({
-  //   //   modalData: [{ name: "object" }, ...prevState.modalData],
-  //   // }));
-  //   // this.setState({ addToCartItem: productObj });
-  //   // this.setState({ addToCartAmount: amount });
-  //   // console.log("product Obj", this.state.addToCartItem);
-  //   // console.log("product amount", this.state.addToCartAmount);
-  //   let newCartItem = {
-  //     item: productObj,
-  //     amount: quantity,
-  //   };
-  //   let newCartItems = this.state.cartItems.concat(newCartItem);
-  //   this.setState({ cartItems: newCartItems });
-  //   console.log("newcartitem,", newCartItem);
-  //   console.log("newcartitems,", newCartItems);
-  //   console.log("cart state,", this.state.cartItems);
-  // };
-
   setModalInfo(productIndex, productObj) {
     this.setState({ modalID: productIndex });
     this.setState({ modalData: productObj });
@@ -88,9 +49,9 @@ class Product extends Component {
       <div className="container ">
         <div>
           <p className="small text-muted small text-uppercase mb-1">
-            Made the hard way
+            VXP Solution
           </p>
-          <h2 className="h5 text-uppercase mb-4">Top trending products</h2>
+          <h2 className="h5 text-uppercase mb-4">Overview & Pricing </h2>
         </div>
         <div className="row">
           {item.map((item, index) => (
@@ -140,6 +101,21 @@ class Product extends Component {
                   {item.addPerHour.length > 0 && (
                     <p className="small text-muted">
                       per hour: ${item.addPerHour}
+                    </p>
+                  )}
+                  {item.add100.length > 0 && (
+                    <p className="small text-muted">
+                      100 user/month: ${item.add100}
+                    </p>
+                  )}
+                  {item.add200.length > 0 && (
+                    <p className="small text-muted">
+                      200 user/month: ${item.add200}
+                    </p>
+                  )}
+                  {item.add300.length > 0 && (
+                    <p className="small text-muted">
+                      300 user/month: ${item.add300}
                     </p>
                   )}
                 </div>

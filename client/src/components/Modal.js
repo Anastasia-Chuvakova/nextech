@@ -8,6 +8,10 @@ class BootstrapModal extends React.Component {
     this.state = {
       showHide: false,
       click: 1,
+      addLanguage: false,
+      add100: false,
+      add200: false,
+      add300: false,
       // showNum: true,
       cartID: "",
       cartData: {},
@@ -27,27 +31,87 @@ class BootstrapModal extends React.Component {
     }
   };
 
+  addLanguage = () => {
+    this.setState({ addLanguage: !this.state.addLanguage });
+  };
+
+  addUser = () => {
+    this.setState({ add100: !this.state.add100 });
+    this.setState({ add100: !this.state.add200 });
+    this.setState({ add100: !this.state.add300 });
+  };
   setCartInfo(productObj, amount) {
     // this.setState({ cartID: productIndex });
     // this.setState({ cartData: productObj });
-    // this.props.addToCart(productObj, amount);
-    //let modalData = document.getElementsByClassName("container-model");
-    let newCartItem = {
-      product: productObj,
-      quantity: amount,
-      itemTotal: amount * productObj.price,
-    };
+    let newCartItem = {};
+    if (this.state.addLanguage) {
+      console.log("addlang");
+      newCartItem = {
+        product: productObj,
+        addLanguage: this.state.addLanguage,
+        add100: this.state.add100,
+        add200: this.state.add200,
+        add300: this.state.add300,
+        quantity: amount, //keys in sessions storrage
+        itemTotal:
+          amount * (Number(productObj.price) + Number(productObj.addLanguage)),
+
+        //price:
+      };
+    } else {
+      console.log("no addlang");
+      newCartItem = {
+        product: productObj,
+        addLanguage: this.state.addLanguage,
+        quantity: amount, //keys in sessions storrage
+        itemTotal: amount * productObj.price,
+
+        //price:
+      };
+      // if(this.state.add100 || this.state.add200 || this.state.add300){
+      //   console.log("addUser");
+      //   newCartItem = {
+      //     product: productObj,
+      //     addLanguage: this.state.addLanguage,
+      //     add100: this.state.add100,
+      //     add200: this.state.add200,
+      //     add300: this.state.add300,
+      //     quantity: amount, //keys in sessions storrage
+      //     itemTotal:
+      //       amount * ((productObj.add100) +
+      //             Number(productObj.add200) +
+      //             Number(productObj.add300)),
+      // };
+      // }else {
+      //   console.log("no addlang");
+      //   newCartItem = {
+      //     product: productObj,
+      //     addLanguage: this.state.addLanguage,
+      //     add100: this.state.add100,
+      //     add200: this.state.add200,
+      //     add300: this.state.add300,
+      //     quantity: amount, //keys in sessions storrage
+      //     itemTotal: amount * productObj.price
+
+      //     //price:
+      //   }
+    }
+
     //read session storage cart items
 
     if (sessionStorage.getItem("cartItems") === null) {
       console.log(newCartItem);
+
       let cartItems = [];
+
       cartItems.push(newCartItem);
+
       sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
       console.log(JSON.parse(sessionStorage.getItem("cartItems")));
     } else {
       let cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
       let itemExists = false;
+
       for (let i = 0; i < cartItems.length; i++) {
         if (newCartItem.product.id === cartItems[i].product.id) {
           cartItems[i].quantity += newCartItem.quantity;
@@ -64,8 +128,7 @@ class BootstrapModal extends React.Component {
 
       console.log(JSON.parse(sessionStorage.getItem("cartItems")));
     }
-  }
-
+  } //do not delete this tag!
   render() {
     return (
       <>
@@ -102,7 +165,7 @@ class BootstrapModal extends React.Component {
                   </div>
                   <div>
                     <p>Product ID: {this.props.productData.id}</p>
-                    <p>Description: {this.props.productData.description}</p>
+                    <p>{this.props.productData.description}</p>
                   </div>
                   <div>
                     {this.props.productData.price > 0 && (
@@ -116,7 +179,14 @@ class BootstrapModal extends React.Component {
                           <p className=" small text-muted p-2">
                             add language: ${this.props.productData.addLanguage}
                           </p>
-                          <input className="form-control-sm" type="checkbox" />
+                          <input
+                            className="form-control-sm"
+                            type="checkbox"
+                            onChange={() => {
+                              this.addLanguage();
+                            }}
+                            checked={this.state.addLanguage}
+                          />
                         </div>
                       </form>
                     )}
@@ -130,6 +200,58 @@ class BootstrapModal extends React.Component {
                       <p className="small text-muted">
                         per hour: ${this.props.productData.addPerHour}
                       </p>
+                    )}
+
+                    {this.props.productData.add100 > 0 && (
+                      <form className="input-group ">
+                        <div className="d-flex input-group-prepend">
+                          <p className=" small text-muted p-2">
+                            add 100 user/month: ${this.props.productData.add100}
+                          </p>
+                          <input
+                            className="form-control-sm"
+                            type="checkbox"
+                            onChange={() => {
+                              this.addUser();
+                            }}
+                            checked={this.state.add100}
+                          />
+                        </div>
+                      </form>
+                    )}
+                    {this.props.productData.add200 > 0 && (
+                      <form className="input-group ">
+                        <div className="d-flex input-group-prepend">
+                          <p className=" small text-muted p-2">
+                            add 200 user/month: ${this.props.productData.add200}
+                          </p>
+                          <input
+                            className="form-control-sm"
+                            type="checkbox"
+                            onChange={() => {
+                              this.addUser();
+                            }}
+                            checked={this.state.add200}
+                          />
+                        </div>
+                      </form>
+                    )}
+                    {this.props.productData.add300 > 0 && (
+                      <form className="input-group ">
+                        <div className="d-flex input-group-prepend">
+                          <p className=" small text-muted p-2">
+                            add 300 user/month: ${this.props.productData.add300}
+                          </p>
+                          <input
+                            className="form-control-sm"
+                            type="checkbox"
+                            onChange={() => {
+                              this.addUser();
+                            }}
+                            checked={this.state.add300}
+                          />
+                        </div>
+                      </form>
                     )}
                   </div>
                 </Modal.Body>
@@ -178,12 +300,6 @@ class BootstrapModal extends React.Component {
                     onClick={() => this.handleModalShowHide()}
                   >
                     Close
-                  </Button>
-                  <Button
-                    variant="primary"
-                    onClick={() => this.handleModalShowHide()}
-                  >
-                    Check Out
                   </Button>
                 </Modal.Footer>
               </Modal>
